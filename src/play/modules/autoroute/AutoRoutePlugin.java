@@ -11,16 +11,8 @@ import play.mvc.Router.Route;
 
 public class AutoRoutePlugin extends PlayPlugin {
 	
-	/**
-	 * example 
-	 * request : /users/1000
-	 * auto generate : /users/1000.json
-	 */
-	 private static final String TARGET_PATTERN = "(/[a-zA-Z0-9]+)$";
+	private static final String TARGET_PATTERN = "(/[a-zA-Z0-9]+)$";
 
-    public void onApplicationStart() {
-    }
-    
     @Override
     public void onRoutesLoaded() {
     	
@@ -35,8 +27,6 @@ public class AutoRoutePlugin extends PlayPlugin {
     	extensions = formats.split(",");
         Logger.debug("auto routes loaded ");
 
-        //final String[] extensions = {"json", "xml"};
-        
         List<AutoRoute> candidates = new ArrayList<AutoRoute>();
         for (Route r : Router.routes) {
                 Logger.debug("### route action : %s, method :%s, path :%s", r.action, r.method, r.path);
