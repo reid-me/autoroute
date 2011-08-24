@@ -1,0 +1,4 @@
+self: play -> autoroute 0.1
+
+require:
+    - play
