@@ -5,7 +5,8 @@ h3. Example
 You just writed routes file
 GET		/users/1	Application.home
 
-# generated the code as below
+generated the code as below
+
 GET		/users/1.json	Application.home
 or
 GET		/users/1.xml	Application.home
@@ -15,6 +16,11 @@ h3. Installation
 Under dependecies.yml
 require:
 	- play -> autoroute 0.1
+
+h3. Configuration
+
+Under applicaton.conf
+autoroute.format=json,xml (you want)
 
 
 
