@@ -2,3 +2,4 @@ self: play -> autoroute 0.1
 
 require:
     - play
+	- play -> gson 1.7.1
